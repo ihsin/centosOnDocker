@@ -8,6 +8,5 @@ EXPOSE 22
 #start the sshd service so other containers can login via port 22
 RUN /usr/sbin/sshd
 #need a deamon to keep the container running
-ADD deamon.sh /usr/local
-RUN chmod 0777 /usr/local/deamon.sh
-CMD ["/usr/local/deamon.sh"]
+ENTRYPOINT ["sleep"]
+CMD ["infinity"]
